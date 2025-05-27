@@ -5,10 +5,9 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Skeleton } from '@/components/ui/skeleton';
 import { Calendar, Clock, User, ArrowRight, PenTool, BookOpen, Users, Star, TrendingUp, Zap } from 'lucide-react';
-import type { PostWithAuthor } from '@shared/schema';
 
 export default function HomePage() {
-  const { data: posts, isLoading } = useQuery<PostWithAuthor[]>({
+  const { data: posts, isLoading } = useQuery({
     queryKey: ['/api/posts'],
   });
 
